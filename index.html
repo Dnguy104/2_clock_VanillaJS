@@ -31,6 +31,7 @@
 			}
 			else {
 				sec.style.transition = 'all 0.05s';
+				sec.style.transitionTimingFunction= 'cubic-bezier(0.15, 0.56, 0, 1.93)';
 			}
 			sec.style.transform = `translate(10px, 195px) rotate(${(seconds / 60) * 360 + 90}deg)`;
 			min.style.transform = `translate(10px, 195px) rotate(${(minutes / 60) * 360 + 90}deg)`;
