@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	
+	
+</head>
+<body>
+	<div class="clock">
+		<div class="hands"id="second"></div>
+		<div class="hands"id="minute"></div>
+		<div class="hands"id="hour"></div>
+
+	</div>
+	<div id="cover"></div>
+	 
+	
+	<script>
+		var sec = document.querySelector('#second');
+		var hour = document.querySelector('#hour');
+		var min = document.querySelector('#minute');
+		
+		function setDate() {
+			var now = new Date();
+			var seconds = now.getSeconds();
+			var minutes = now.getMinutes();
+			var hours = now.getHours();
+			if(seconds == 0) {
+				sec.style.transition = 'all 0s';
+			}
+			else {
+				sec.style.transition = 'all 0.05s';
+			}
+			sec.style.transform = `translate(10px, 195px) rotate(${(seconds / 60) * 360 + 90}deg)`;
+			min.style.transform = `translate(10px, 195px) rotate(${(minutes / 60) * 360 + 90}deg)`;
+			hour.style.transform = `translate(10px, 195px) rotate(${(hours / 12) * 360 + 90}deg)`;
+			//console.log(minutes);
+		}
+		setInterval(setDate, 1000);
+	</script>
+</body>
+</html>
