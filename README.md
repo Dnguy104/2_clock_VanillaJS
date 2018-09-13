@@ -9,4 +9,4 @@ project #2 of Javascript30
 
 ## Demo
 
-View project demo at []().
+View project demo at [https://dnguy104.github.io/2_clock_VanillaJS/](https://dnguy104.github.io/2_clock_VanillaJS/).
